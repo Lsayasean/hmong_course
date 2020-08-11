@@ -46,6 +46,12 @@ group :development do
 
   # RSpec, tests are not just scripts that verify your application code
   gem 'rspec-rails', '~> 4.0', '>= 4.0.1'
+
+  # Guard automates various tasks by running custom rules whenever file or directories are modified
+  gem 'guard', '~> 2.16', '>= 2.16.2'
+
+  # LiveReload guard allows to automatically reload your browser when 'view' files are modified
+  gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
 end
 
 group :test do
@@ -54,6 +60,9 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+
+  # Shoulda Matchers provides RSpec- and Minitest-compatible one-liners to test common Rails functionality 
+  gem 'shoulda-matchers', '~> 4.3'
 
 end
 
