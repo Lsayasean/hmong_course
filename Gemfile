@@ -28,6 +28,9 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+# authentication
+gem 'devise', '~> 4.7', '>= 4.7.2'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -40,6 +43,15 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  # RSpec, tests are not just scripts that verify your application code
+  gem 'rspec-rails', '~> 4.0', '>= 4.0.1'
+
+  # Guard automates various tasks by running custom rules whenever file or directories are modified
+  gem 'guard', '~> 2.16', '>= 2.16.2'
+
+  # LiveReload guard allows to automatically reload your browser when 'view' files are modified
+  gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
 end
 
 group :test do
@@ -48,6 +60,10 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+
+  # Shoulda Matchers provides RSpec- and Minitest-compatible one-liners to test common Rails functionality 
+  gem 'shoulda-matchers', '~> 4.3'
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
