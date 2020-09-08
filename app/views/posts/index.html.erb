@@ -1,0 +1,13 @@
+<div class="container">
+  <%= form_with model: Post.new do |f| %>
+    <div class="">
+      <%= f.text_field :body, autofocus: true  %>
+    </div>
+
+    <div class="">
+      <%= f.submit "submit" %>
+    </div>
+  <% end %>
+</div>
+
+<%= render 'posts' %>
