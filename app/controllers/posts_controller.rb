@@ -14,7 +14,6 @@ class PostsController < ApplicationController
       redirect_to root_path
       flash[:success] = "Post Created"
     else 
-      redirect_to root_path
       flash[:error] = "Post Not Created"
     end
   end
@@ -25,7 +24,6 @@ class PostsController < ApplicationController
       redirect_to root_path
       flash[:success] = "Post Updated"
     else
-      redirect_to root_path 
       flash[:error] = "Post Not Updated"
     end
   end
@@ -40,7 +38,6 @@ class PostsController < ApplicationController
       redirect_to root_path
       flash[:success] = "Post Destroyed"
     else 
-      redirect_to root_path
       flash[:error] = "Post Not Destroyed"
     end 
   end

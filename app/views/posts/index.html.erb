@@ -1,11 +1,13 @@
-<div class="container mt-5">
-  <%= form_with model: Post.new do |f| %>
-    <div class="row d-flex justify-content-between">
-      <div class="col-md-8 ">
-        <%= f.text_field :body, autofocus: true, class: "w-100 p-2 rounded-pill", placement: "Write a post here"  %>
-      </div>
-    </div>
-  <% end %>
+<div class="container">
+  <%= link_to 'Add Announcement', new_post_path,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'}  %>
 </div>
 
-<%= render @posts %>
+<div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content"></div>
+  </div>
+</div>
+
+<div class="container">
+  <%= render @posts %>
+</div>

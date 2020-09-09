@@ -1,0 +1,7 @@
+<%= form_with model: Post.new do |f| %>
+  <div class="row d-flex justify-content-between">
+    <div class="col-md-12">
+      <%= f.text_field :body, class: "w-100 p-2 rounded-pill post-input", placement: "Write a post here"  %>
+    </div>
+  </div>
+<% end %>

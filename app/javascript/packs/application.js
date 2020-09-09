@@ -11,7 +11,7 @@
 // const imagePath = (name) => images(name, true)
 
 import 'bootstrap';
-import '../../assets/stylesheets/application.scss';
+import '../stylesheets/application.scss'
 import Rails from '@rails/ujs';
 
 window.jQuery = $;
