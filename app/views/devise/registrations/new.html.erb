@@ -20,6 +20,10 @@
         <%= f.email_field :email, autofocus: true, autocomplete: "email",  class: "w-100"  %>
       </div>
 
+      <div>
+        <%= f.hidden_field :team_id, value: 1 %>
+      </div>
+
       <div class="field">
         <%= f.label :password %>
         <% if @minimum_password_length %>

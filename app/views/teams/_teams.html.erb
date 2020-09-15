@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-md-3 m-1" id="team_1">
+    <% form_with(model: Team.new, url: team_path(id: ':id'), method: :patch) do |f| %>
+      <div class="p-2 border rounded" style="min-height: 75px;" data-target="drag-and-drop.dropzone">
+        <h2 class="font-bold text-xl m-2 font-secondary">
+          Team 1
+        </h2>
+        <%= f.hidden_field :team_id, value: Team.team_1&.id %>
+        <%= render partial: 'users', collection: @team_1, as: :data %>
+      <% end %>
+    </div>
+  </div>
+</div>

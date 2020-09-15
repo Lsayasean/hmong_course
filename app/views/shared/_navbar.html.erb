@@ -10,15 +10,15 @@
           <a class="nav-link" href="#">Announcements</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Teams</a>
+          <%= link_to  "Teams", teams_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Frequent Questions</a>
         </li>
+        <li class="nav-item">
+          <%= link_to  "Logout", destroy_user_session_path, method: :delete, id: 'logout', class: "nav-link" %>
+        </li>
       </ul>
-    </div>
-    <div>
-      <%= link_to  "Logout", destroy_user_session_path, method: :delete, id: 'logout', class: "nav-link" %>
     </div>
   </nav>
 <% end %>
