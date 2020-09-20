@@ -1,13 +1,9 @@
 <div class="container">
   <div class="mt-2">
-    <h4 class="text-center">Please drag and drop your name to your team</h4>
-  </div>
-  
-  <div class="row justify-content-center mt-2 border p-5 rounded shadow">
-    <%= render partial: 'users', collection: @unassigned, as: :data %>
+    <h4 class="text-center">Choose team by clicking on "Logged in as" </h4>
   </div>
 
-  <div class="row justify-content-betweeen">
+  <div class="row">
     <%= render 'teams' %>
   <div>
 

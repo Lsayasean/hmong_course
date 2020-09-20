@@ -17,10 +17,9 @@ import Rails from '@rails/ujs';
 import { Application } from "stimulus"
 import { definitionsFromContext } from "stimulus/webpack-helpers"
 
-
-const application = Application.start()
-const context = require.context("./controllers", true, /\.js$/)
-application.load(definitionsFromContext(context))
+const application = Application.start();
+const context = require.context('controllers', true, /\.js$/);
+application.load(definitionsFromContext(context));
 
 window.jQuery = $;
 window.$ = $;
@@ -31,8 +30,8 @@ require('@rails/activestorage').start();
 
 // prevent double renders by destroying js widgets
 // before cache
-document.addEventListener('turbolinks:before-cache', () => {
-  $('select').each((n, ele) => {
-    if (ele.selectize) ele.selectize.destroy();
-  });
-});
+// document.addEventListener('turbolinks:before-cache', () => {
+//   $('select').each((n, ele) => {
+//     if (ele.selectize) ele.selectize.destroy();
+//   });
+// });

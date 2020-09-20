@@ -1,13 +1,62 @@
-<div class="row">
-  <div class="col-md-3 m-1" id="team_1">
-    <% form_with(model: Team.new, url: team_path(id: ':id'), method: :patch) do |f| %>
-      <div class="p-2 border rounded" style="min-height: 75px;" data-target="drag-and-drop.dropzone">
-        <h2 class="font-bold text-xl m-2 font-secondary">
-          Team 1
-        </h2>
-        <%= f.hidden_field :team_id, value: Team.team_1&.id %>
-        <%= render partial: 'users', collection: @team_1, as: :data %>
-      <% end %>
+<div class="row mt-1 w-100 p-5 justify-content-center" data-controller="drag-and-drop">
+  <!-- unassigned -->
+  <div class="p-5 border border bg-light  rounded col-md-12" style="min-height: 100px;"  id="team_unassigned">
+      <div class="p-2rounded" style="min-height: 75px;" data-target="drag-and-drop.dropzone">
+      <h3 class="font-bold ">
+        Unassigned
+      </h3>
+      <%= render partial: "non", collection: @unassigned, as: :data %>
     </div>
   </div>
+
+  <!-- team 0 -->
+  <div class="p-3 border border-primary bg-primary rounded col-md-3 m-2" style="min-height: 100px;"  id="team_zero">
+      <div class="p-2rounded" style="min-height: 75px;" data-target="drag-and-drop.dropzone">
+      <h3 class="font-bold ">
+        Team 1
+      </h3>
+      <%= render partial: "users", collection: @team_0, as: :data %>
+    </div>
+  </div>
+
+  <!-- team 1 -->
+  <div class="p-3 border border-info bg-info rounded col-md-3 m-2" style="min-height: 100px;"  id="team_one">
+      <div class="p-2rounded" style="min-height: 75px;" data-target="drag-and-drop.dropzone">
+      <h3 class="font-bold text-sm">
+        Team 2
+      </h3>
+      <%= render partial: "users", collection: @team_1, as: :data %>
+    </div>
+  </div>
+
+  <!-- team 2 -->
+  <div class="p-3 border border-success bg-success rounded col-md-3 m-2" style="min-height: 100px;"  id="team_two">
+      <div class="p-2rounded" style="min-height: 75px;" data-target="drag-and-drop.dropzone">
+      <h3 class="font-bold text-sm">
+        Team 3
+      </h3>
+      <%= render partial: "users", collection: @team_2, as: :data %>
+    </div>
+  </div>
+
+  <!-- team 3 -->
+  <div class="p-3 border border-danger bg-danger rounded col-md-3 m-2" style="min-height: 100px;"  id="team_three">
+      <div class="p-2rounded" style="min-height: 75px;" data-target="drag-and-drop.dropzone">
+      <h3 class="font-bold text-sm">
+        Team 4
+      </h3>
+      <%= render partial: "users", collection: @team_3, as: :data %>
+    </div>
+  </div>
+
+  <!-- team 4 -->
+  <div class="p-3 border border-warning bg-warning rounded col-md-3 m-2" style="min-height: 100px;"  id="team_four">
+      <div class="p-2rounded" style="min-height: 75px;" data-target="drag-and-drop.dropzone">
+      <h3 class="font-bold text-sm">
+        Team 5
+      </h3>
+      <%= render partial: "users", collection: @team_4, as: :data %>
+    </div>
+  </div>
+  
 </div>

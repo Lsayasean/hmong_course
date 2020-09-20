@@ -6,7 +6,7 @@ Team.create!(
 
 5.times do |n| 
   Team.create!(
-  name: "team_#{ n }"
+  name: "team_#{n}"
   )
 end 
 
@@ -16,7 +16,7 @@ end
   User.create(
     email: "admin#{n}@admin.com",
     password: "password",
-    first_name: "admin",
+    first_name: "admin#{n}",
     last_name: "admin",
     team_id: n
   )
