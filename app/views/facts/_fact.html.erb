@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-body">
+    <h6>Question number <%= fact.id %></h6>
+    <%= fact.question %>
+    <br />
+    <hr />
+    <% if fact.answer.present? %>
+      <%= fact.answer %>
+    <% else  %>
+      <%= form_with( model: Project.new, url: project_path(id: fact.id), method: :patch ) do |f| %>
+        <%= f.text_field :answer, class: "w-100 p-2 rounded-pill post-input mt-2" %>
+      <% end %>
+  </div>
+</div>
