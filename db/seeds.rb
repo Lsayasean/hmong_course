@@ -11,13 +11,10 @@ Team.create!(
 end 
 
 
-
-7.times do |n|
-  User.create(
-    email: "admin#{n}@admin.com",
-    password: "password",
-    first_name: "admin#{n}",
-    last_name: "admin",
-    team_id: n
-  )
-end
+User.create(
+  email: "adminofadmins@admin.com",
+  password: "adminofadmin",
+  first_name: "Ultra",
+  last_name: "Admin",
+  team_id: 1
+)

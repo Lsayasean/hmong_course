@@ -1,6 +1,12 @@
-<div class="container">
-  <%= link_to 'Add Announcement', new_post_path, {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'}  %>
-</div>
+<% if current_user.id == 2 %>
+  <div class="container">
+      <%= link_to 'Add Announcement', new_post_path, {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'}  %>
+  </div>
+<% else %>
+  <div class="container">
+      <h4>Announcements and Home Work</h4>
+  </div>
+<% end %>
 
 <div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
