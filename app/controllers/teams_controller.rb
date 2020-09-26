@@ -1,11 +1,11 @@
 class TeamsController < ApplicationController
   def index
     @unassigned = fetch_unassigned
-    @team_0 = fetch_team_0
-    @team_1 = fetch_team_1
-    @team_2 = fetch_team_2
-    @team_3 = fetch_team_3
-    @team_4 = fetch_team_4
+    @team_1 = fetch_team_0
+    @team_2 = fetch_team_1
+    @team_3 = fetch_team_2
+    @team_4 = fetch_team_3
+    @team_5 = fetch_team_4
   end
 
   def update
@@ -33,23 +33,23 @@ class TeamsController < ApplicationController
   end
 
   def fetch_team_0
-    all_users.by_team("team_0")
-  end
-
-  def fetch_team_1
     all_users.by_team("team_1")
   end
 
-  def fetch_team_2
+  def fetch_team_1
     all_users.by_team("team_2")
   end
 
-  def fetch_team_3
+  def fetch_team_2
     all_users.by_team("team_3")
   end
 
-  def fetch_team_4
+  def fetch_team_3
     all_users.by_team("team_4")
+  end
+
+  def fetch_team_4
+    all_users.by_team("team_5")
   end
 
 end
