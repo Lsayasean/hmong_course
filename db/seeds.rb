@@ -6,7 +6,7 @@ Team.create!(
 
 5.times do |n| 
   Team.create!(
-  name: "team_#{n}"
+  name: "team_#{n + 1}"
   )
 end 
 
