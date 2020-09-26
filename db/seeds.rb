@@ -12,9 +12,9 @@ end
 
 
 User.create(
-  email: "adminofadmins@admin.com",
-  password: "adminofadmin",
-  first_name: "Ultra",
+  email: "hmongteacher@hmong.com",
+  password: "hmongteacher",
+  first_name: "Teacher",
   last_name: "Admin",
   team_id: 1
 )
